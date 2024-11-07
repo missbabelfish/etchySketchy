@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchy Etchy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="containerHolder">
+        <div class="container"></div>
+    </div>
+
+    <dialog id="squaresDialog">
+        <form method="dialog">
+          <p>
+            <label for="squares">Enter number of squares per side:</label>
+            <input id="squares" name="squareInput" type="number" min="3" max="100"/>
+          </p>
+          <div>
+            <button id="cancel" type="reset">Cancel</button>
+            <button id="submitSquares" type="submit">Confirm</button>
+          </div>
+        </form>
+      </dialog>
+      
+    <button id="chooseSquares">Choose Square Density</button>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
