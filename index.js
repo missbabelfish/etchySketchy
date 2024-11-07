@@ -13,6 +13,8 @@ squaresSubmit.addEventListener('click', chooseSquares)
 function drawSquares(squares) {
     for (let i = 0; i < squares**2; i++) {
         const square = document.createElement('div')
+        // square.addEventListener('mouseenter', () => square.style.backgroundColor = 'teal')
+        square.addEventListener('mouseover', () => square.style.backgroundColor = 'teal')
         square.style.width = `${100/squares}%`
         square.style.height = `${100/squares}%`
         container.appendChild(square)
@@ -21,6 +23,9 @@ function drawSquares(squares) {
 }
 
 function chooseSquares() {
+    while (container.firstChild) { 
+        container.removeChild(container.lastChild);
+    }
     const squaresChosen = squaresInput.value
     drawSquares(squaresChosen)
 }
